@@ -6,14 +6,16 @@ class CocktailsController < ApplicationController
   def show
     @cocktail = Cocktail.find(params[:id])
     # @doses = Dose.where(cocktail_id: @cocktail.id)
-    @doses = @cocktail.doses
+    @dose = Dose.new
+    @review = Review.new
   end
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail), notice: "New cocktail has been created"
-    else render :new
+    else
+      render :new
     end
   end
 

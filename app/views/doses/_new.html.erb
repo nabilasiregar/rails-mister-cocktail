@@ -1,8 +1,8 @@
 <h1>Add new dose</h1>
 
-<%= simple_form_for([@cocktail, @dose]) do |d| %>
+<%= simple_form_for([cocktail, dose]) do |d| %>
   <div class="form-inputs">
-    <%= d.association :ingredient %>
+    <%= d.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
     <%= d.input :description %>
   </div>
 
