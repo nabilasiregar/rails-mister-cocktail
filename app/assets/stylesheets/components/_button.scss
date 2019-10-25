@@ -1,0 +1,14 @@
+.btn {
+  padding: 10px;
+}
+
+.btn-outline-success {
+  color: $blue;
+  border-color: $blue;
+    &:hover {
+      text-decoration: none;
+      color: $light-blue;
+      opacity: 0.7;
+      background-color: $pale;
+    }
+}

@@ -1,0 +1,54 @@
+
+.frame {
+  padding: 20px;
+}
+
+.picture img {
+  border-radius: 10px;
+}
+
+
+.picture {
+  position: relative;
+  height: 200px;
+  width: 400px;
+}
+
+#image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+#cocktname {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  padding: 10px;
+  border: 1px solid #FFF;
+  width: 240px;
+  color: #FFF;
+  margin: 35px;
+}
+.social {
+  position:absolute;
+  right:8px;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  z-index:2;
+  #fa {
+    text-color: white;
+    display: contents;
+    color:white;
+    margin:7px;
+    opacity:0;
+  }
+
+  &.destroy {
+    bottom:10px;
+    background-color: $black;
+  }
+}

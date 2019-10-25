@@ -2,9 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .body {
-  background-color: $pale;
 }
 
 .container {
+  background-color: $pale;
+  border-radius: 10px;
+}
+
+#head h1 {
+  color: $black;
+  vertical-align: top;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#container-bg {
+  padding: 200px 100px;
   background-color: $pink;
 }

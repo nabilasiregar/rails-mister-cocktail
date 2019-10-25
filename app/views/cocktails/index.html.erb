@@ -1,18 +1,44 @@
-<body>
-<h1 class="text-center">Cocktails</h1>
+<p>
+  <span id="banner"></span>
+</p>
+<div id=container-bg>
 
-<div class="container text-center">
-  <div class="d-flex justify-content-center">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card p-3 m-3  w-150">
-      <%= link_to "#{cocktail.name}", cocktail_path(cocktail.id) %>
+  <nav class="navbar navbar-light">
+        <a class="navbar-brand">Whistling Cocktails</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search cocktail</button>
+        </form>
+  </nav>
+
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-md-12 text-center pb-40">
+        <div class="cards">
+        <% @cocktails.each do |cocktail| %>
+
+          <div class="frame row justify-content-center text-center">
+
+            <div class="picture">
+              <img id="image" src="https://source.unsplash.com/1600x900/?cocktail,<%=cocktail.name%>" style="width: 300px;">
+              <h2 id="cocktname"><%= link_to "#{cocktail.name}", cocktail_path(cocktail.id) %></h2>
+            </div>
+
+            <div class="social destroy">
+              <%= link_to cocktail_path(cocktail.id), method: :delete, data: { confirm: "Are you sure you want to delete #{cocktail.name}?" } do %>
+                <p class="fa fa-trash" id="fa"></p>
+             <% end %>
+           </div>
+         </div>
+        <% end %>
+      </div>
+    <br>
+    <%= link_to "Add New Cocktail", new_cocktail_path, class: "btn btn-primary"%>
+    <br>
     </div>
-  <% end %>
   </div>
-   <br>
-  <%= link_to "Add new Cocktail", new_cocktail_path, class: "btn btn-primary"%>
 </div>
-</body>
+
 
 
 

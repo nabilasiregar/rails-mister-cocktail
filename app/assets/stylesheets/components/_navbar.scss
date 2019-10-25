@@ -1,12 +1,20 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  margin-bottom: 30px;
+    .navbar-brand {
+      font-weight: bold;
+      color: white;
+      margin: 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      font-size: 38px;
+      margin: 0.5em 0;
+      font-family: 'DM Serif Display', serif;
+    }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+
+
+
+
+
